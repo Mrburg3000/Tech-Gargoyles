@@ -3,23 +3,44 @@
     background-color: #222;
     color: #fff;
     display: flex;
-    padding: 20px 0;
-    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(20px, 5vw, 40px);
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.footer div {
+  width: 100%;
+  padding: 0 clamp(10px, 3vw, 20px);
 }
 
 .fo1 {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 18px);
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .pfo1 {
     margin-bottom: 5px;
+    line-height: 1.5;
 }
 
 .fo2 {
     margin-bottom: 10px;
+    line-height: 1.8;
 }
 
 .fo3 {
-    font-size: 12px;
+    font-size: clamp(10px, 1.5vw, 12px);
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 20px 15px;
+  }
+  
+  .footer div {
+    padding: 0;
+  }
 }

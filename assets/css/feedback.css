@@ -1,61 +1,78 @@
 
 .feedback {
     background-color: #f9f9f9;
-    padding: 40px 20px;
+    padding: clamp(20px, 5vw, 40px);
     text-align: center;
+}
+
+.feedback h2 {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 20px;
 }
 
 .card2 {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   margin-top: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
   border-radius: 60px;
+  max-width: 600px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+  transform: translateY(-5px);
 }
 
 .f4 {
-  font-size: 22px;
+  font-size: clamp(16px, 3vw, 22px);
 }
 
-.chip {
-  display: flex;
-  padding: 0 25px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 50px;
-  border-radius: 25px;
-  background-color: #f1f1f1;
-  margin-right: 220px;
-}
-
+.chip,
 .chip1 {
   display: flex;
-  padding: 0 25px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 50px;
+  padding: 0 15px;
+  height: auto;
+  min-height: 50px;
+  font-size: clamp(14px, 2.5vw, 16px);
+  line-height: 1.5;
   border-radius: 25px;
   background-color: #f1f1f1;
-  margin-right: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 90%;
 }
 
+.chip img,
 .chip1 img {
-  float: left;
-  margin: 0 10px 0 -25px;
+  float: none;
+  margin: 0;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-.chip img {
-  float: left;
-  margin: 0 10px 0 -25px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
 .checked {
   color: orange;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+@media screen and (max-width: 768px) {
+  .card2 {
+    margin-top: 30px;
+    border-radius: 20px;
+  }
+  
+  .chip,
+  .chip1 {
+    justify-content: flex-start;
+  }
 }
